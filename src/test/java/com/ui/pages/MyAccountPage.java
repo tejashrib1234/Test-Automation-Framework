@@ -14,7 +14,7 @@ public class MyAccountPage extends BrowerUtility {
 
 	}
 
-	public String getUserName() {
+	public String getUserName() throws InterruptedException {
 
 		return getVisibleText(USER_NAME_LOCATOR);
 	}

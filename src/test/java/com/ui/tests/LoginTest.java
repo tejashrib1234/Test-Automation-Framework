@@ -43,7 +43,7 @@ public class LoginTest extends TestBase {
 
 	@Test(description = "Verifies if the valid user is able to login into the application", groups = { "e2e",
 			"sanity" }, dataProviderClass = com.ui.dataproviders.LoginDataProvider.class, dataProvider = "LoginTestExcelDataProvider", retryAnalyzer = com.ui.listeners.MyRetryAnalyzer.class)
-	public void loginExcelTest(User user) {
+	public void loginExcelTest(User user) throws InterruptedException {
 
 		assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(), user.getPassword()).getUserName(),
 				"Tejashri Chavan");
