@@ -46,8 +46,10 @@ public class LoginTest extends TestBase {
 	public void loginExcelTest(User user) throws InterruptedException {
 
 		assertEquals(homePage.goToLoginPage().doLoginWith(user.getEmailAddress(), user.getPassword()).getUserName(),
-				"Tejashri Chava");
+				"Tejashri Chavan");
 
 	}
+
+	
 
 }

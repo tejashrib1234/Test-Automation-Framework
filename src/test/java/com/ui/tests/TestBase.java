@@ -22,8 +22,8 @@ public class TestBase {
 
 	@Parameters({ "browser", "isLambdaTest", "isHeadLess" })
 	@BeforeMethod(description = "Load the Homepage of the website")
-	public void setUp(@Optional("chrome") String browser, @Optional("false") boolean isLambdaTest,
-			@Optional("true") boolean isHeadLess, ITestResult result) {
+	public void setUp(@Optional("edge") String browser, @Optional("false") boolean isLambdaTest,
+			@Optional("false") boolean isHeadLess, ITestResult result) {
 		this.isLambdaTest = isLambdaTest;
 		WebDriver lambdadriver;
 		if (isLambdaTest) {
@@ -40,13 +40,13 @@ public class TestBase {
 		return homePage;
 	}
 
-	@AfterMethod(description = "Tear down the browser")
-	public void tearDown() {
-		if (isLambdaTest) {
-			LambdaTestUtility.quitSession();
-		} // quit for lambda
-		else {
-			homePage.quit();
-		} // local
-	}
+//	@AfterMethod(description = "Tear down the browser")
+//	public void tearDown() {
+//		if (isLambdaTest) {
+//			LambdaTestUtility.quitSession();
+//		} // quit for lambda
+//		else {
+//			homePage.quit();
+//		} // local
+//	}
 }

@@ -35,7 +35,9 @@ public final class HomePage extends BrowerUtility {
 
 	public LoginPage goToLoginPage() { // Page Functions -------------->
 		logger.info("Trying to perform click to go on Sign in page");
+
 		cilckOn(SIGN_IN_LINK_LOCATOR);
+
 		LoginPage loginPage = new LoginPage(getDriver());
 		return loginPage;
 	}
